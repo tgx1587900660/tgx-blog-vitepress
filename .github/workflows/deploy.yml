@@ -35,20 +35,25 @@ jobs:
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - uses: pnpm/action-setup@v2 # 如果使用 pnpm，请取消注释
-        with:
-          cache: pnpm # 或 pnpm / yarn
-      # 缓存 node_modules
-      - name: Cache Dependencies
+      - name: Setup Node
         uses: actions/setup-node@v4
-        id: modules-cache
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+          node-version: 20
+          cache: pnpm # 或 pnpm / yarn
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      # 缓存 node_modules
+      # - name: Cache Dependencies
+      #   uses: actions/setup-node@v4
+      #   id: modules-cache
+      #   with:
+      #     path: '**/node_modules'
+      #     key: ${{ runner.os }}-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
       - name: Install dependencies
         run: pnpm install
       - name: Build with VitePress
         run: |
-          pnpm run docs:build
+          pnpm docs:build
           touch docs/.vitepress/dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
