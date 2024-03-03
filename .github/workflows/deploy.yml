@@ -35,6 +35,9 @@ jobs:
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - uses: pnpm/action-setup@v2 # 如果使用 pnpm，请取消注释
+        with:
+          node-version: 20
+          cache: npm # 或 pnpm / yarn
       # 缓存 node_modules
       - name: Cache Dependencies
         uses: actions/setup-node@v4
