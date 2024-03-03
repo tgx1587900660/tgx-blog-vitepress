@@ -1,6 +1,7 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
-name: Deploy VitePress site to Pages
+name: Deploy Docs
+run-name: ${{ github.actor }} is deploying docs to github pages 🚀
 
 on:
   # 在针对 `main` 分支的推送上运行。如果你
@@ -28,18 +29,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # 获取 git 日志，用于博客底部更新信息
+      - name: get git info
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - uses: pnpm/action-setup@v2 # 如果使用 pnpm，请取消注释
-      - name: Setup Node:Use Node.js ${{ matrix.node-version }}
+      # 缓存 node_modules
+      - name: Cache Dependencies
         uses: actions/setup-node@v4
+        id: modules-cache
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: pnpm
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v4
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
       - name: Install dependencies
         run: pnpm install
       - name: Build with VitePress
@@ -50,7 +52,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
-  # 部署工作
+
   deploy:
     environment:
       name: github-pages
