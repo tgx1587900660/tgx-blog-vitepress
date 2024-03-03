@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
-name: Deploy Docs
+name: Deploy-My-Blog-VitePress
 run-name: ${{ github.actor }} is deploying docs to github pages 🚀
 
 on:
@@ -35,7 +35,8 @@ jobs:
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
 
-      - uses: pnpm/action-setup@v2 # 如果使用 pnpm，请取消注释
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8
 
