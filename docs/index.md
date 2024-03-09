@@ -4,21 +4,24 @@ layout: home
 
 hero:
   name: 'telectron 的网络日志'
-  text: 'A VitePress Site'
-  tagline: My great project tagline
+  text: 测试一下 vitepress
+  tagline: '经验 +1'
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 开始阅读 →
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: Examples
       link: /api-examples
+  image:
+    src: /logo2.jpg
+    alt: VitePress
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 坐
+    details: 你我之相遇，乃命运之指引
+  - title: 忘
+    details: 吾尝终日而思矣，不如须臾之所学也
+  - title: 道
+    details: 受尽苦难而不厌，乃修罗之道
 ---
