@@ -1,11 +1,9 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
-#
 name: Deploy-My-Blog-VitePress
 run-name: ${{ github.actor }} is deploying docs to github pages 🚀
 
 on:
-  # 在针对 `main` 分支的推送上运行。如果你
-  # 使用 `master` 分支作为默认分支，请将其更改为 `master`
+  # 在针对 `main` 分支的推送上运行。如果你使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
     branches: [main]
 
@@ -27,6 +25,7 @@ concurrency:
 jobs:
   # 构建工作
   build:
+    name: Tgx's blog of vitePress is building
     runs-on: ubuntu-latest
     steps:
       # 获取 git 日志，用于博客底部更新信息
@@ -35,26 +34,32 @@ jobs:
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
 
+      # 设置 pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 8
 
+      # 设置 Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm # 或 pnpm / yarn
+          cache: npm # 或 pnpm / yarn
 
+      # 设置 Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # 安装依赖
       - name: Install dependencies
         run: pnpm install # 或 npm install 或 yarn install
 
+      # 构建静态资源
       - name: Build with VitePress
         run: pnpm build
 
+      # 上传构建产物
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -62,16 +67,17 @@ jobs:
 
   # 部署工作
   deploy:
+    # 设置环境变量，以便在部署工作中使用
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     # 仅在 build(构建工作) 完成后运行
     needs: build
-
     runs-on: ubuntu-latest
 
-    name: Deploy-Tgx's-Blog-VitePress
+    # 部署工作的步骤
+    name: 部署到 GitHub Pages
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
