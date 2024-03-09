@@ -5,8 +5,13 @@ export default defineConfig({
   title: 'telectron 的网络日志',
   base: '/tgx-blog-vitepress/',
   description: '唐干宵的博客|唐干宵的网络日志|谭竿霄的博客|谭竿霄的网络日志|前端技术学习|使用 vuepress 搭建个人博客',
+  head: [
+    // 改变title的图标
+    ['link', { rel: 'icon', href: '/tgx-blog-vitepress/xiao.ico' }]
+  ],
   cleanUrls: true,
   themeConfig: {
+    logo: '/logo.jpg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -30,7 +35,7 @@ export default defineConfig({
       }
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/tgx1587900660/tgx-blog-vitepress-test' }]
   },
   markdown: {
     container: {

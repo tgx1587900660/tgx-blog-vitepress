@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 获取 git 日志，用于博客底部更新信息
-      - name: get git info
+      - name: Get gitInfo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
@@ -54,21 +54,26 @@ jobs:
 
       - name: Build with VitePress
         run: |
-          pnpm docs:build
+          pnpm build
           touch docs/.vitepress/dist/.nojekyll
 
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
 
+  # 部署工作
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    # 仅在 build(构建工作) 完成后运行
     needs: build
+
     runs-on: ubuntu-latest
-    name: Deploy
+
+    name: Deploy-Tgx's-Blog-VitePress
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
