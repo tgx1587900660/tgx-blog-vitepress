@@ -25,7 +25,7 @@ concurrency:
 jobs:
   # 构建工作
   build:
-    name: Tgx's blog of vitePress is building
+    name: 打包成静态页面
     runs-on: ubuntu-latest
     steps:
       # 获取 git 日志，用于博客底部更新信息
@@ -45,7 +45,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm # 或 pnpm / yarn
+          cache: pnpm # 或 pnpm / yarn
 
       # 设置 Pages
       - name: Setup Pages
