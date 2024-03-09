@@ -3,11 +3,11 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'telectron 的网络日志',
-  base: '/tgx-blog-vitepress/',
+  base: '/tgx-blog-vitepress-test/',
   description: '唐干宵的博客|唐干宵的网络日志|谭竿霄的博客|谭竿霄的网络日志|前端技术学习|使用 vuepress 搭建个人博客',
   head: [
     // 改变title的图标
-    ['link', { rel: 'icon', href: '/tgx-blog-vitepress/xiao.ico' }]
+    ['link', { rel: 'icon', href: '/tgx-blog-vitepress-test/xiao.ico' }]
   ],
   cleanUrls: true,
   themeConfig: {
