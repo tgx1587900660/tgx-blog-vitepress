@@ -30,15 +30,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 获取 git 日志，用于博客底部更新信息
-      - name: Get gitInfo
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        uses: pnpm/action-setup@v3
+        # with:
+        #   version: 8
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -50,12 +50,10 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install # 或 npm install 或 yarn install
 
       - name: Build with VitePress
-        run: |
-          pnpm build
-          touch docs/.vitepress/dist/.nojekyll
+        run: pnpm build
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
