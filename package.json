@@ -4,6 +4,7 @@
   "description": "我的网络日志，基于 vitepress",
   "private": true,
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev docs",
@@ -12,8 +13,8 @@
   },
   "keywords": [],
   "author": "tangganxiao",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "vitepress": "1.0.0-rc.44"
+    "vitepress": "1.0.1"
   }
 }

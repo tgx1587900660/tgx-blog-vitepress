@@ -2,28 +2,37 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: 唐干宵的网络日志
+titleTemplate: 唐干宵的博客|唐干宵的网络日志|谭竿霄的博客|谭竿霄的网络日志|tgx的博客|tgx的网络日志|使用 vitepress 搭建的个人博客
+
 hero:
-  name: 'telectron 的网络日志'
-  text: 测试一下 vitepress
-  tagline: '经验 +1'
+  name: 'tgx的网络日志'
+  text: '经验 +1'
+  tagline: 芝兰生于幽谷，不以无人而不芳
   actions:
     - theme: brand
       text: 开始阅读 →
-      link: /markdown-examples
+      link: '/frontend/nuxt3-template'
     - theme: alt
-      text: Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/tgx1587900660
   image:
     src: /logo2.jpg
-    alt: VitePress
+    alt: 唐干宵的网络日志.jpg
 
 features:
-  - title: 坐
-    details: 你我之相遇，乃命运之指引
-  - title: 忘
+  - icon: 🙈
+    title: 脚踏实地
+    details: 一步一个脚印，才不会迷失方向
+  - icon: 🙉
+    title: 专注学习
     details: 吾尝终日而思矣，不如须臾之所学也
-  - title: 道
+  - icon: 🙊
+    title: 热情不灭
     details: 受尽苦难而不厌，乃修罗之道
+  # - icon: 🙊
+  #   title: 热情不灭
+  #   details: 受尽苦难而不厌，乃修罗之道
 ---
 
 <style>
@@ -34,7 +43,6 @@ features:
   --vp-home-hero-image-filter: blur(44px);
 }
 
-/* 图片加上圆角 */
 .image-container .image-src {
   border-radius: 10%;
 }
