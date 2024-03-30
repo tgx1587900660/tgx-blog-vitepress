@@ -1,5 +1,9 @@
 // https://vitepress.dev/reference/site-config
+// import { createRequire } from 'module'; // 需安装开发依赖 @types/node
 import { defineConfig, type DefaultTheme } from 'vitepress';
+
+// const require = createRequire(import.meta.url);
+// const imageMap = require('../imgs/images.config.json');
 
 export default defineConfig({
   title: 'tangganxiao',

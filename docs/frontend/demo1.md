@@ -1,5 +1,9 @@
 # 提取图片主要色值
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 ::: info
 
 此文实现一个功能：如何提取一张图片的主要色值，并应用到任意元素的渐变背景中。
@@ -12,8 +16,8 @@
 
 > (TODO: 怎么在设置渐变背景的时候给个过渡？)
 
-- 效果图
-  <img :src="theme.logo" />
+效果图:
+<img :src="withBase('/imgs/css-1/css-1.gif')" />
 
 ## 1. 安装依赖
 
