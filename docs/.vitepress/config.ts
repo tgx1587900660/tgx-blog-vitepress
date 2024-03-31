@@ -79,7 +79,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Nuxt3 项目功能集成', link: '/nuxt3-template' },
-        { text: '提前图片主要色值', link: '/demo1' },
+        { text: '提取图片主要色值', link: '/demo1' },
         // { text: '路由', link: 'routing' },
         // { text: '部署', link: 'deploy' },
       ],

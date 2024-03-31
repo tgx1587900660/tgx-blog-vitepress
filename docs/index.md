@@ -16,6 +16,10 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/tgx1587900660
+    - theme: alt
+      text: 查看vuepress旧版 →
+      link: https://tgx1587900660.github.io/tgx-blog/
+
   image:
     src: /logo2.jpg
     alt: 唐干宵的网络日志.jpg
