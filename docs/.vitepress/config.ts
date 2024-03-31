@@ -7,7 +7,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress';
 
 export default defineConfig({
   title: 'tangganxiao',
-  base: '/tgx-blog-vitepress-test/',
+  base: '/tgx-blog-vitepress/',
   description: '唐干宵的博客|唐干宵的网络日志|谭竿霄的博客|谭竿霄的网络日志|tgx的博客|tgx的网络日志|使用 vitepress 搭建的个人博客',
   head: [
     // 改变title的图标
@@ -39,7 +39,7 @@ export default defineConfig({
       },
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/tgx1587900660/tgx-blog-vitepress-test' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/tgx1587900660/tgx-blog-vitepress' }],
   },
   markdown: {
     container: {
