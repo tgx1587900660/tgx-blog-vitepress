@@ -113,3 +113,26 @@ pnpm add prettier prettier-plugin-tailwindcss -D
 > TODO 这里是为了集成 prettier 的时候加的，研究的还不够透测
 
 查看文档 [Git hooks](https://prettier.io/docs/en/install.html#git-hooks)，安步骤操作完成后，会生成一个 .husky 文件夹，同时在提交代码时，会自动扫描代码，并使用 prettier 配置文件来格式化代码
+
+## 8. 添加 @pinia/nuxt 模块，利用 pinia store + 点击事件 实现 layout 动态切换 - 2024.04.01
+
+查看文档 [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss?tab=readme-ov-file)
+
+1. 安装依赖
+
+```bash
+pnpm add @pinia/nuxt
+```
+
+2. 添加到 nuxt.config.ts 中即可
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: ['@pinia/nuxt'],
+});
+```
+
+3. 创建 pinia store 来管理 layout 状态 `xxxx`，**一定要注意不能解构 store，否则会失去响应式**
+
+4. 在 layouts 目录中建立多个 layout 文件，然后在页面中使用 `<NuxtLayout :name="xxxx">`
