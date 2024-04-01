@@ -116,8 +116,6 @@ pnpm add prettier prettier-plugin-tailwindcss -D
 
 ## 8. 添加 @pinia/nuxt 模块，利用 pinia store + 点击事件 实现 layout 动态切换 - 2024.04.01
 
-查看文档 [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss?tab=readme-ov-file)
-
 1. 安装依赖
 
 ```bash
