@@ -19,6 +19,7 @@ export default defineConfig({
     nav: nav(),
     sidebar: {
       '/frontend': { base: '/frontend', items: sidebarGuide() },
+      '/about-me': { base: '/about-me', items: sidebarAboutMe() },
     },
 
     footer: {
@@ -43,10 +44,10 @@ export default defineConfig({
   },
   markdown: {
     container: {
+      infoLabel: '简介',
       tipLabel: '提示',
       warningLabel: '警告',
       dangerLabel: '危险',
-      infoLabel: '信息',
       detailsLabel: '详细信息',
     },
     image: {
@@ -68,10 +69,14 @@ function nav(): DefaultTheme.NavItem[] {
         },
       ],
     },
+    {
+      text: '个人中心',
+      link: 'about-me/career-plans',
+    },
   ];
 }
 
-// 侧边栏
+// 前端侧边栏
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
@@ -84,17 +89,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         // { text: '部署', link: 'deploy' },
       ],
     },
-    // {
-    //   text: '写作',
-    //   collapsed: false,
-    //   items: [
-    //     { text: 'Markdown 扩展', link: 'markdown' },
-    //     { text: '资源处理', link: 'asset-handling' },
-    //     { text: 'frontmatter', link: 'frontmatter' },
-    //     { text: '在 Markdown 使用 Vue', link: 'using-vue' },
-    //     { text: '国际化', link: 'i18n' }
-    //   ]
-    // },
     // {
     //   text: '自定义',
     //   collapsed: false,
@@ -115,5 +109,22 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     //   ]
     // },
     // { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
+  ];
+}
+
+// 个人中心侧边栏
+function sidebarAboutMe(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: '创作',
+      collapsed: false,
+      items: [
+        { text: '九项重要的职业规划', link: '/career-plans' },
+        // { text: '资源处理', link: 'asset-handling' },
+        // { text: 'frontmatter', link: 'frontmatter' },
+        // { text: '在 Markdown 使用 Vue', link: 'using-vue' },
+        // { text: '国际化', link: 'i18n' }
+      ],
+    },
   ];
 }
