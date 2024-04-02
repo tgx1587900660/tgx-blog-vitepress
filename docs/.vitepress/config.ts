@@ -24,7 +24,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2019-${new Date().getFullYear()} - 谭竿霄`,
+      copyright: `版权所有 © 2019-${new Date().getFullYear()} - 唐干宵`,
     },
 
     docFooter: {
@@ -89,17 +89,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         // { text: '部署', link: 'deploy' },
       ],
     },
-    // {
-    //   text: '自定义',
-    //   collapsed: false,
-    //   items: [
-    //     { text: '自定义主题', link: 'custom-theme' },
-    //     { text: '扩展默认主题', link: 'extending-default-theme' },
-    //     { text: '构建时数据加载', link: 'data-loading' },
-    //     { text: 'SSR 兼容性', link: 'ssr-compat' },
-    //     { text: '连接 CMS', link: 'cms' }
-    //   ]
-    // },
     // {
     //   text: '实验性功能',
     //   collapsed: false,

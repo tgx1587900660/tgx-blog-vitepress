@@ -106,15 +106,17 @@ export default defineNuxtPlugin((nuxtApp) => {
 pnpm add prettier prettier-plugin-tailwindcss -D
 ```
 
-2. 在根目录下创建 prettier 配置文件，并添加 prettier-plugin-tailwindcss 到插件列表中
+2. 在根目录下创建 prettier 配置文件，并添加 prettier-plugin-tailwindcss 到插件列表中。
 
 ## 7. 添加 husky + lint-staged 依赖，实现 git 钩子注册 - 2024.03.30
 
 > TODO 这里是为了集成 prettier 的时候加的，研究的还不够透测
 
-查看文档 [Git hooks](https://prettier.io/docs/en/install.html#git-hooks)，安步骤操作完成后，会生成一个 .husky 文件夹，同时在提交代码时，会自动扫描代码，并使用 prettier 配置文件来格式化代码
+查看文档 [Git hooks](https://prettier.io/docs/en/install.html#git-hooks)，安步骤操作完成后，会生成一个 .husky 文件夹，同时在提交代码时，会自动扫描代码，并使用 prettier 配置文件来格式化代码。
 
 ## 8. 添加 @pinia/nuxt 模块，利用 pinia store + 点击事件 实现 layout 动态切换 - 2024.04.01
+
+> 这种方案有可能在路由切换时，遇到报错，一个更好的解决方案是：取消 `<NuxtLayout>` 的 `name` 属性，并在 `middleware/` 目录中定义 `defineNuxtRouteMiddleware` 路由中间件，然后使用 `setPageLayout` 方法动态切换 layout。
 
 1. 安装依赖
 

@@ -25,18 +25,15 @@ hero:
     alt: 唐干宵的网络日志.jpg
 
 features:
-  - icon: 🙈
+  - icon: 🙅‍♀️
     title: 脚踏实地
     details: 一步一个脚印，才不会迷失方向
-  - icon: 🙉
+  - icon: ☝
     title: 专注学习
     details: 吾尝终日而思矣，不如须臾之所学也
-  - icon: 🙊
+  - icon: 💗
     title: 热情不灭
     details: 受尽苦难而不厌，乃修罗之道
-  # - icon: 🙊
-  #   title: 热情不灭
-  #   details: 受尽苦难而不厌，乃修罗之道
 ---
 
 <style>
