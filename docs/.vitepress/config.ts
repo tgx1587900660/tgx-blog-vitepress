@@ -71,8 +71,8 @@ function nav(): DefaultTheme.NavItem[] {
       ],
     },
     {
-      text: '个人中心',
-      link: 'about-me/career-plans',
+      text: '个人收藏',
+      link: 'about-me/create/career-plans',
     },
   ];
 }
@@ -102,14 +102,25 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-// 个人中心侧边栏
+// 个人收藏侧边栏
 function sidebarAboutMe(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: '创作',
       collapsed: false,
       items: [
-        { text: '九项重要的职业规划', link: '/career-plans' },
+        { text: '九项重要的职业规划', link: '/create/career-plans' },
+        // { text: '资源处理', link: 'asset-handling' },
+        // { text: 'frontmatter', link: 'frontmatter' },
+        // { text: '在 Markdown 使用 Vue', link: 'using-vue' },
+        // { text: '国际化', link: 'i18n' }
+      ],
+    },
+    {
+      text: '链接',
+      collapsed: false,
+      items: [
+        { text: '友情链接', link: '/link/friend' },
         // { text: '资源处理', link: 'asset-handling' },
         // { text: 'frontmatter', link: 'frontmatter' },
         // { text: '在 Markdown 使用 Vue', link: 'using-vue' },
