@@ -1,17 +1,14 @@
 // https://vitepress.dev/reference/site-config
-// import { createRequire } from 'module'; // 需安装开发依赖 @types/node
 import { defineConfig, type DefaultTheme } from 'vitepress';
-
-// const require = createRequire(import.meta.url);
-// const imageMap = require('../imgs/images.config.json');
+import { getCsdnSvgIcon, getJueJinSvgIcon } from './utils';
 
 export default defineConfig({
   title: 'tangganxiao',
   base: '/tgx-blog-vitepress/',
-  description: '唐干宵的博客|唐干宵的网络日志|谭竿霄的博客|谭竿霄的网络日志|tgx的博客|tgx的网络日志|使用 vitepress 搭建的个人博客',
+  description: '唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志|使用 vitepress 搭建的个人博客',
   head: [
-    // 改变title的图标
-    ['meta', { name: 'theme-color', content: 'pink' }],
+    // 添加头部信息
+    ['meta', { name: 'theme-color', content: 'test-meta' }],
   ],
   cleanUrls: true,
   themeConfig: {
@@ -40,7 +37,11 @@ export default defineConfig({
       },
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/tgx1587900660/tgx-blog-vitepress' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/tgx1587900660/tgx-blog-vitepress' },
+      { icon: { svg: getCsdnSvgIcon() }, link: 'https://blog.csdn.net/baidu_41651062?type=blog' },
+      { icon: { svg: getJueJinSvgIcon() }, link: 'https://juejin.cn/user/4442497214339501' },
+    ],
   },
   markdown: {
     container: {

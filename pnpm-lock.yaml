@@ -8,12 +8,9 @@ importers:
 
   .:
     devDependencies:
-      '@types/node':
-        specifier: ^20.12.2
-        version: 20.12.2
       vitepress:
         specifier: 1.0.1
-        version: 1.0.1(@algolia/client-search@4.23.2)(@types/node@20.12.2)(search-insights@2.13.0)
+        version: 1.0.1(@algolia/client-search@4.23.2)(@types/node@20.12.2)(postcss@8.4.38)(search-insights@2.13.0)
 
 packages:
 
@@ -788,6 +785,7 @@ snapshots:
       '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.23.2)(algoliasearch@4.22.1)
       '@docsearch/css': 3.6.0
       algoliasearch: 4.22.1
+    optionalDependencies:
       search-insights: 2.13.0
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -928,10 +926,11 @@ snapshots:
   '@types/node@20.12.2':
     dependencies:
       undici-types: 5.26.5
+    optional: true
 
   '@types/web-bluetooth@0.0.20': {}
 
-  '@vitejs/plugin-vue@5.0.4(vite@5.2.7)(vue@3.4.21)':
+  '@vitejs/plugin-vue@5.0.4(vite@5.2.7(@types/node@20.12.2))(vue@3.4.21)':
     dependencies:
       vite: 5.2.7(@types/node@20.12.2)
       vue: 3.4.21
@@ -1022,8 +1021,9 @@ snapshots:
     dependencies:
       '@vueuse/core': 10.9.0(vue@3.4.21)
       '@vueuse/shared': 10.9.0(vue@3.4.21)
-      focus-trap: 7.5.4
       vue-demi: 0.14.7(vue@3.4.21)
+    optionalDependencies:
+      focus-trap: 7.5.4
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -1164,25 +1164,26 @@ snapshots:
 
   to-fast-properties@2.0.0: {}
 
-  undici-types@5.26.5: {}
+  undici-types@5.26.5:
+    optional: true
 
   vite@5.2.7(@types/node@20.12.2):
     dependencies:
-      '@types/node': 20.12.2
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.13.2
     optionalDependencies:
+      '@types/node': 20.12.2
       fsevents: 2.3.3
 
-  vitepress@1.0.1(@algolia/client-search@4.23.2)(@types/node@20.12.2)(search-insights@2.13.0):
+  vitepress@1.0.1(@algolia/client-search@4.23.2)(@types/node@20.12.2)(postcss@8.4.38)(search-insights@2.13.0):
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.2)(search-insights@2.13.0)
       '@shikijs/core': 1.2.1
       '@shikijs/transformers': 1.2.1
       '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 5.0.4(vite@5.2.7)(vue@3.4.21)
+      '@vitejs/plugin-vue': 5.0.4(vite@5.2.7(@types/node@20.12.2))(vue@3.4.21)
       '@vue/devtools-api': 7.0.16(vue@3.4.21)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       '@vueuse/integrations': 10.9.0(focus-trap@7.5.4)(vue@3.4.21)
@@ -1192,6 +1193,8 @@ snapshots:
       shiki: 1.2.1
       vite: 5.2.7(@types/node@20.12.2)
       vue: 3.4.21
+    optionalDependencies:
+      postcss: 8.4.38
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'

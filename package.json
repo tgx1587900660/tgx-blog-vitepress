@@ -1,6 +1,6 @@
 {
   "name": "tgx-blog-vitepress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "我的网络日志，基于 vitepress",
   "private": true,
   "main": "index.js",
@@ -15,7 +15,6 @@
   "author": "tangganxiao",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.12.2",
     "vitepress": "1.0.1"
   }
 }

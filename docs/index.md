@@ -3,21 +3,21 @@
 layout: home
 
 title: 唐干宵的网络日志
-titleTemplate: 唐干宵的博客|唐干宵的网络日志|谭竿霄的博客|谭竿霄的网络日志|tgx的博客|tgx的网络日志|使用 vitepress 搭建的个人博客
+titleTemplate: 唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志|使用 vitepress 搭建的个人博客
 
 hero:
-  name: 'tgx的网络日志'
-  text: '经验 +1'
-  tagline: 芝兰生于幽谷，不以无人而不芳
+  name: 'tgx 的网络日志'
+  text: '命由我作，福自己求'
+  tagline: 命由我作，福自己求
   actions:
     - theme: brand
       text: 开始阅读 →
       link: '/frontend/nuxt3-template'
     - theme: alt
-      text: GitHub
+      text: GitHub →
       link: https://github.com/tgx1587900660
     - theme: alt
-      text: 查看vuepress旧版 →
+      text: 查看 vuepress 旧版 →
       link: https://tgx1587900660.github.io/tgx-blog/
 
   image:
@@ -25,10 +25,10 @@ hero:
     alt: 唐干宵的网络日志.jpg
 
 features:
-  - icon: 🙅‍♀️
+  - icon: 💗
     title: 脚踏实地
     details: 一步一个脚印，才不会迷失方向
-  - icon: ☝
+  - icon: 🐒
     title: 专注学习
     details: 吾尝终日而思矣，不如须臾之所学也
   - icon: 💗

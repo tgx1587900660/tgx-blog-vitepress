@@ -16,16 +16,17 @@ import { withBase } from 'vitepress'
 
 > (TODO: 怎么在设置渐变背景的时候给个过渡？)
 
-效果图:
+## 1. 效果图
+
 <img :src="withBase('/imgs/css-1/css-1.gif')" />
 
-## 1. 安装依赖
+## 2. 安装依赖
 
 ```bash
 pnpm add --save colorthief
 ```
 
-## 2. 主要代码
+## 3. 主要代码
 
 ```vue
 <template>
