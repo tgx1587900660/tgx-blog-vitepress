@@ -62,26 +62,30 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: '前端',
+      text: '前端学习',
       items: [
         {
           text: 'nuxt3-template',
-          link: 'frontend/nuxt3-template',
+          link: '/frontend/nuxt3-template',
+        },
+        {
+          text: '代码管理',
+          items: [{ text: 'Git', link: '/frontend/git/index' }],
         },
       ],
     },
     {
       text: '个人收藏',
-      link: 'about-me/create/career-plans',
+      link: '/about-me/create/career-plans',
     },
   ];
 }
 
-// 前端侧边栏
+// 前端学习 侧边栏
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: '前端 skills',
+      text: 'nuxt3-template',
       collapsed: false,
       items: [
         { text: 'Nuxt3 项目功能集成', link: '/nuxt3-template' },
@@ -90,19 +94,19 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         // { text: '部署', link: 'deploy' },
       ],
     },
-    // {
-    //   text: '实验性功能',
-    //   collapsed: false,
-    //   items: [
-    //     { text: 'MPA 模式', link: 'mpa-mode' },
-    //     { text: 'sitemap 生成', link: 'sitemap-generation' }
-    //   ]
-    // },
+    {
+      text: '代码管理',
+      collapsed: false,
+      items: [
+        { text: 'Git', link: '/git/index' },
+        // { text: 'sitemap 生成', link: 'sitemap-generation' }
+      ],
+    },
     // { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
   ];
 }
 
-// 个人收藏侧边栏
+// 个人收藏 侧边栏
 function sidebarAboutMe(): DefaultTheme.SidebarItem[] {
   return [
     {
