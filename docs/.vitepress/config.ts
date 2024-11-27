@@ -16,6 +16,7 @@ export default defineConfig({
     nav: nav(),
     sidebar: {
       '/frontend': { base: '/frontend', items: sidebarGuide() },
+      '/cognition': { base: '/cognition', items: sidebarCognition() },
       '/about-me': { base: '/about-me', items: sidebarAboutMe() },
     },
 
@@ -65,12 +66,40 @@ function nav(): DefaultTheme.NavItem[] {
       text: '前端学习',
       items: [
         {
-          text: 'nuxt3-template',
-          link: '/frontend/nuxt3-template',
+          text: 'Nuxt',
+          items: [
+            { text: 'nuxt3-template', link: '/frontend/nuxt3-template' },
+            // { text: 'nuxt3-template', link: '/frontend/nuxt3-template' },
+          ],
+        },
+        {
+          text: '问题解决',
+          items: [
+            { text: '提取图片主要色值', link: '/frontend/demo1' },
+            { text: 'translate 抖动问题', link: '/frontend/demo2' },
+          ],
         },
         {
           text: '代码管理',
-          items: [{ text: 'Git', link: '/frontend/git/index' }],
+          items: [
+            { text: 'Git', link: '/frontend/code/git' },
+            // { text: 'Git', link: '/frontend/code/git' },
+          ],
+        },
+      ],
+    },
+    {
+      text: '认知提升',
+      items: [
+        {
+          text: '记忆大师',
+          items: [
+            { text: '记忆大师（原理篇）', link: '/cognition/memory/memory' },
+            { text: '记忆 十二星座', link: '/cognition/memory/demo1' },
+            { text: '记忆 圆周率前 30 位', link: '/cognition/memory/demo2' },
+            { text: '记忆 世界十大文豪', link: '/cognition/memory/demo3' },
+            { text: '记忆 《三十六计》', link: '/cognition/memory/demo4' },
+          ],
         },
       ],
     },
@@ -85,12 +114,19 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'nuxt3-template',
+      text: 'Nuxt3',
       collapsed: false,
       items: [
-        { text: 'Nuxt3 项目功能集成', link: '/nuxt3-template' },
+        { text: 'nuxt3-template 项目功能集成', link: '/nuxt3-template' },
+        // { text: '部署', link: 'deploy' },
+      ],
+    },
+    {
+      text: '问题解决',
+      collapsed: false,
+      items: [
         { text: '提取图片主要色值', link: '/demo1' },
-        { text: '解决 translate 抖动问题', link: '/demo2' },
+        { text: 'translate 抖动问题', link: '/demo2' },
         // { text: '部署', link: 'deploy' },
       ],
     },
@@ -98,10 +134,36 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '代码管理',
       collapsed: false,
       items: [
-        { text: 'Git', link: '/git/index' },
+        { text: 'Git', link: '/code/git' },
         // { text: 'sitemap 生成', link: 'sitemap-generation' }
       ],
     },
+    // { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
+  ];
+}
+
+// 认知 侧边栏
+function sidebarCognition(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: '记忆大师',
+      collapsed: false,
+      items: [
+        { text: '记忆大师（原理篇）', link: '/memory/memory' },
+        { text: '记忆 十二星座', link: '/memory/demo1' },
+        { text: '记忆 圆周率前 30 位', link: '/memory/demo2' },
+        { text: '记忆 世界十大文豪', link: '/memory/demo3' },
+        { text: '记忆 《三十六计》', link: '/memory/demo4' },
+      ],
+    },
+    // {
+    //   text: '代码管理',
+    //   collapsed: false,
+    //   items: [
+    //     { text: 'Git', link: '/code/git' },
+    //     // { text: 'sitemap 生成', link: 'sitemap-generation' }
+    //   ],
+    // },
     // { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
   ];
 }
