@@ -82,7 +82,7 @@ function nav(): DefaultTheme.NavItem[] {
         {
           text: '代码管理',
           items: [
-            { text: 'Git', link: '/frontend/code/git' },
+            { text: 'Git 命令', link: '/frontend/code/git' },
             // { text: 'Git', link: '/frontend/code/git' },
           ],
         },
@@ -134,7 +134,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '代码管理',
       collapsed: false,
       items: [
-        { text: 'Git', link: '/code/git' },
+        { text: 'Git 命令', link: '/code/git' },
         // { text: 'sitemap 生成', link: 'sitemap-generation' }
       ],
     },
