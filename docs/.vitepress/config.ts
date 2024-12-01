@@ -82,6 +82,7 @@ function nav(): DefaultTheme.NavItem[] {
           items: [
             { text: 'git 命令', link: '/frontend/code/git' },
             { text: 'npm 命令', link: '/frontend/code/npm' },
+            { text: 'pnpm 命令', link: '/frontend/code/pnpm' },
           ],
         },
       ],
@@ -134,6 +135,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'git 命令', link: '/code/git' },
         { text: 'npm 命令', link: '/code/npm' },
+        { text: 'pnpm 命令', link: '/code/pnpm' },
       ],
     },
     // { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
