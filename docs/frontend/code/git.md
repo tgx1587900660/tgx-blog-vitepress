@@ -1,31 +1,31 @@
 # Git 命令
 
 ::: info
-此文收集了一些常用的 git 命令
+此文收集常用的 git 命令
 :::
 
-## 1. 设置用户名和邮箱
+## 1. git 配置
 
 > 这里 假设我英文名是 `telectron`, 邮箱是 `shuaibi@qq.com`
 
 ```bash
-# 全局设置
-git config --global user.name telectron
-git config --global user.email shuaibi@qq.com
-
-# 局部设置
-git config user.name telectron
-git config user.email shuaibi@qq.com
+git config user.name telectron # 局部设置 name
+git config user.email shuaibi@qq.com # 局部设置 email
+git config --global user.name telectron # 全局设置 name
+git config --global user.email shuaibi@qq.com # 全局设置 email
+git config --list # 查看局部配置
+git config --list --global # 查看全局配置
 ```
 
-## 2. 查看项目的 git 配置
+## 2. git 分支操作
 
 ```bash
-# 当前项目
-git config --list
-
-# 全局配置
-git config --list --global
+git branch # 查看本地分支
+git branch -a # 查看本地和远程分支
+git branch -r # 查看远程分支
+git branch -vv # 查看本地分支与远程分支的关系
+git branch -d 'telectron_dev' # 删除本地分支 telectron_dev
+git branch -m telectron_dev # 重命名当前分支为 telectron_dev
 ```
 
 ## 3. 版本回退
