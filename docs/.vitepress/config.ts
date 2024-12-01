@@ -6,9 +6,11 @@ export default defineConfig({
   title: 'tangganxiao',
   base: '/tgx-blog-vitepress/',
   description: '唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志|使用 vitepress 搭建的个人博客',
+  // 添加头部信息
   head: [
-    // 添加头部信息
     ['meta', { name: 'theme-color', content: 'test-meta' }],
+    ['link', { rel: 'icon', href: `/tgx-blog-vitepress/favicon.ico` }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
   cleanUrls: true,
   themeConfig: {
@@ -19,17 +21,14 @@ export default defineConfig({
       '/cognition': { base: '/cognition', items: sidebarCognition() },
       '/about-me': { base: '/about-me', items: sidebarAboutMe() },
     },
-
     footer: {
       message: '基于 MIT 许可发布',
       copyright: `版权所有 © 2019-${new Date().getFullYear()} - 唐干宵`,
     },
-
     docFooter: {
       prev: '上一页',
       next: '下一页',
     },
-
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
@@ -37,7 +36,6 @@ export default defineConfig({
         timeStyle: 'medium',
       },
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/tgx1587900660/tgx-blog-vitepress' },
       { icon: { svg: getCsdnSvgIcon() }, link: 'https://blog.csdn.net/baidu_41651062?type=blog' },
@@ -82,8 +80,8 @@ function nav(): DefaultTheme.NavItem[] {
         {
           text: '代码管理',
           items: [
-            { text: 'Git 命令', link: '/frontend/code/git' },
-            // { text: 'Git', link: '/frontend/code/git' },
+            { text: 'git 命令', link: '/frontend/code/git' },
+            { text: 'npm 命令', link: '/frontend/code/npm' },
           ],
         },
       ],
@@ -135,7 +133,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Git 命令', link: '/code/git' },
-        // { text: 'sitemap 生成', link: 'sitemap-generation' }
+        { text: 'npm 命令', link: '/code/npm' },
       ],
     },
     // { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
