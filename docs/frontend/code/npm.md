@@ -27,14 +27,14 @@ npm i 'packageName' -S # 安装到 dependencies 中
 npm i 'packageName' -D # 安装到 devDependencies 中
 npm i --legacy--peer-deps # 安装 peerDependencies 中
 
+npm run 'scriptName' # 运行脚本
+npm cache clean --force # 清除缓存
+
 npm list # 查看已安装的包
 npm list -g # 查看全局已安装的包
 npm config get 'key' # 获取配置项
 npm config set 'key' 'value' # 设置配置项
-
-npm run 'scriptName' # 运行脚本
-npm publish # 发布包
-npm cache clean --force # 清除缓存
-npm uninstall 'packageName' # 卸载指定包
 npm update 'packageName' # 更新指定包
+npm uninstall 'packageName' # 卸载指定包
+npm publish # 发布包
 ```

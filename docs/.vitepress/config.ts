@@ -132,7 +132,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '代码管理',
       collapsed: false,
       items: [
-        { text: 'Git 命令', link: '/code/git' },
+        { text: 'git 命令', link: '/code/git' },
         { text: 'npm 命令', link: '/code/npm' },
       ],
     },
