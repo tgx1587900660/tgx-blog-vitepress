@@ -124,9 +124,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '问题解决',
       collapsed: false,
       items: [
-        { text: '提取图片主要色值', link: '/demo1' },
-        { text: 'translate 抖动问题', link: '/demo2' },
-        // { text: '部署', link: 'deploy' },
+        { text: '提取图片主要色值', link: '/issues/demo1' },
+        { text: 'translate 抖动问题', link: '/issues/demo2' },
+        { text: '后续...', link: '/issues/demo3' },
       ],
     },
     {
